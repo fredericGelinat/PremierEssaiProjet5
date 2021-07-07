@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+/* --------------- Navbar ---------------- */
+.barreDeNavigation {
+    position: sticky;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*background: url("../../backend/images/teddy_2.jpg") center/cover no-repeat;*/
+    background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);
+    z-index: 1;
+  }
+.barreDeNavigation img{
+    border-radius: 23%;
+}
+.justifyBarreDeNavigation {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+.iconeAccueil{
+  font-size: 2.5rem;
+}
+.iconeDeNavigation {
+    font-size: 2.5rem;
+  }
+.boutonPanier {
+    position: relative;
+    cursor: pointer;
+  }
+.NombreItemsDuBoutonPanier {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+  }
+
+/*-------------------header-------------*/ 
+.header {
+    min-height: calc(100vh - 60px);
+    background: url("../../backend/images/teddy_1.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.banniere {
+    text-align: center;
+    /*background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);*/
+    background: transparent;
+    display: inline-block;
+    padding: 2rem;
+    color:#dfb3f5
+   
+  }
+.titreDeLaBanniere {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+  }
+.boutonAchatDeLaBanniere {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+     
+  }
+.boutonAchatDeLaBanniere:hover {
+  background: transparent;
+  color: var(--mainGrey);
+}
+/*-----------------fin du header--------------*/
+/* --------------- Produits ---------------- */
+
+.produits {
+    padding: 4rem 0;
+  }
+  .titreDeLaSection h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  .justifyProduits {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    /* je veux que la colone soit au minimum 260px (responsive)+ AUTOFIT = prend toute la place restante != autofill*/
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    border: turquoise;
+
+  }
+  .imgContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25%;
+  }
+  .boutonDetails {
+    position: absolute;
+    
+    top: 50%;
+    right: 0;
+    
+    
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(201%);
+    
+    
+    
+    
+    font-size: 1rem;
+    color: var(--mainBlack);
+    border: 1px solid rgb(238, 28, 80);
+    
+    cursor: pointer;
+  }
+  .boutonDetails:hover {
+    color: green;
+  }
+  .fas,  .fa-question-circle {
+    margin-right: 0.5rem;
+  }
+  .fa-shopping-cart{
+    color: rgb(224, 64, 117);
+  }
+  .fa-shopping-cart:hover {
+    
+    color: rgb(77, 224, 64);
+  }
+  .imgContainer:hover .boutonDetails {
+    transform: translateX(0);
+    
+    
+    background: transparent;
+  }
+  .boutonAchatPageDescription{
+    position: absolute;
+    
+    top: 50%;
+    right: 0;
+    
+    
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(201%);
+    
+    
+    
+    
+    font-size: 3rem;
+    color: var(--mainBlack);
+    border: 1px solid rgb(12, 236, 31);
+    
+    cursor: pointer;
+  }
+  
+  .boutonAchatPageDescription:hover {
+    color: rgb(58, 245, 11);
+  }
+  .imgContainer:hover .boutonAchatPageDescription {
+    transform: translateX(0);
+    
+    
+    background:transparent;
+  }
+  .imgProduit {
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    transition: var(--mainTransition);
+    border: rgb(224, 64, 163) 5px solid;
+    border-radius: 25%;
+
+  }
+  .imgContainer:hover .imgProduit {
+    opacity: 0.5;
+  }
+  
+  .produit h3 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+  }
+  
+  .produit h4 {
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    text-align: center;
+  }
+  
+  /* ---------------End of Products --------------*/
+
+  /*---------------addFavorite--------*/
+  .article .addFavorite{
+    font-size: 1.4rem;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+}
+
+.article .addFavorite .far{
+    color: rgba(0,0,0,0.2);
+}
+
+.article .addFavorite:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.article .addFavorite.activated{
+    color: yellow;
+}
