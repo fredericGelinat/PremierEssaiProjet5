@@ -4,15 +4,15 @@
  * Gestion des favoris, enregistrement d'un article en favoris, retrait d'un article des favoris et récupération de la liste des favoris
  */
 
- function addFavorites(teddiesId){
+ function addFavorites(teddyId){
     let listFavorites = getFavorites();
-    listFavorites.push({id: teddiesId});
+    listFavorites.push({id: teddyId});
     saveFavorites(listFavorites);
 }
 
-function removeFavorites(teddiesId){
+function removeFavorites(teddyId){
     let listFavorites = getFavorites();
-    listFavorites = listFavorites.filter(favorites => favorites.id != teddiesId);
+    listFavorites = listFavorites.filter(favorites => favorites.id != teddyId);
     saveFavorites(listFavorites);
 }
 
@@ -30,5 +30,5 @@ function getFavoritesId(){
 }
 
 function saveFavorites(listFavorites){
-    localStorage.setItem("listFavorites",JSON.stringify(listFavorites));
+    localStorage.setItem("listFavorites", JSON.stringify(listFavorites));
 }

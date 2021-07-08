@@ -134,7 +134,7 @@ body {
   .boutonDetails {
     position: absolute;
     
-    top: 50%;
+    top: 0%;
     right: 0;
     
     
@@ -237,22 +237,22 @@ body {
   /* ---------------End of Products --------------*/
 
   /*---------------addFavorite--------*/
-  .article .addFavorite{
+   .imgContainer  .addFavorite{
     font-size: 1.4rem;
     position: absolute;
     top: 80px;
     right: 10px;
 }
 
-.article .addFavorite .far{
+.imgContainer .addFavorite .far{
     color: rgba(0,0,0,0.2);
 }
 
-.article .addFavorite:hover{
+.imgContainer .addFavorite:hover{
     color: yellow;
     cursor: pointer;
 }
 
-.article .addFavorite.activated{
+.imgContainer .addFavorite.activated{
     color: yellow;
 }
