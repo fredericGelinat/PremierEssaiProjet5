@@ -256,3 +256,31 @@ body {
 .imgContainer .addFavorite.activated{
     color: yellow;
 }
+
+/*---------------------footer------------------*/
+.footer-1 a,
+.footer-2 a,
+.footer-3 a {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 16px 0;
+  text-decoration: none;
+}
+.heberger h4 {
+  margin-right: -19px;
+}
+.assistance {
+  margin-left: 1%;
+}
+.heberger {
+  margin-left: 17%;
+}
+.a-propos {
+  margin: 0px 1px;
+}
+.all-footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 6% 0 0 0;
+  background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);
+}
